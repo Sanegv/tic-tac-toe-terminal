@@ -6,12 +6,12 @@
  /bin contains the compiled main program, and the different .o files.
 
 ## 2. How to use
- Given that you are using ubuntu, simply run bin/main, or just use the "make" command, and it will recompile and run automatically.
+ If you are using ubuntu, simply run bin/main, or just use the "make" command, and it will recompile and run automatically.
  If you're using another OS, you'll have to recompile the source code for yourself.
- Then, it's a basic tic tac toe. The game automatically starts, and you can only play against another human being (or yourself) on the same terminal, for now.
+ Then, a menu will open and ask you if you want to play player v. player, or against an AI. If you choose AI, you'll get to choose which turn you play, or let the computer pick one randomly.
+ For now, there is only one AI difficulty : it only plays random moves.
 
 ## 3. Future improvements
-- I'll soon add a simple "AI" that plays a random move when it's its turn
-- After that, I'll code an AI that plays the optimal move every time 
+- I'll code an AI that plays the optimal move every time 
 - I might add an intermediate level that tries to win and block you, but without necessarily playing the perfect move
 - In the long term, I'll make a simple GUI

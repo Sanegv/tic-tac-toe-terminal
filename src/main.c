@@ -1,14 +1,9 @@
-#include "fonctions.h"
+#include "AI.h"
 
 int main(){
-	/*char** grille = init_grille();
-	tour(grille, 'X');
-	tour(grille, 'X');
-	tour(grille, 'X');
-	print_grille(grille);
-	printf("%d\n", check_victoire(grille));
-	free_grille(grille);*/
+	time_t t;
+	srand((unsigned) time(&t));
 
-	jeu();
+	menu();
 	return 0;
 }

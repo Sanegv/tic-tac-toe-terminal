@@ -28,7 +28,7 @@ void free_grille(char** grille){
 	free(grille);
 }
 
-char tour(char** grille, char joueur){
+char tour_humains(char** grille, char joueur){
 	int x, y;
 	//on reste dans cette boucle tant que le joueur n'a pas entré un coup valide
 	while(true){
@@ -89,7 +89,7 @@ bool check_nulle(char** grille){
 	return true;
 }
 
-void jeu(){
+void jeu_humains(){
 	char** grille = init_grille();
 	char joueur[2] = {'X', 'O'};
 	int compteur = 0;
@@ -98,7 +98,7 @@ void jeu(){
 
 	//la boucle principale du jeu
 	while(true){
-		etat = tour(grille, joueur[compteur]);
+		etat = tour_humains(grille, joueur[compteur]);
 		//si un joueur a gagné ou si la partie est nulle, on sort du jeu
 		if(etat || check_nulle(grille)) break;
 		//sinon, on passe au joueur suivant

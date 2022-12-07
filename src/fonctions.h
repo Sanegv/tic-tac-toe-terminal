@@ -30,7 +30,7 @@ void free_grille(char** grille);
  * @param joueur 
  * @return char 
  */
-char tour(char** grille, char joueur);
+char tour_humains(char** grille, char joueur);
 
 /**
  * @brief vérifie qu'un des joueurs a gagné
@@ -54,4 +54,4 @@ bool check_nulle(char** grille);
  * @brief appelle toutes les fonctions précédentes pour faire une partie
  * 
  */
-void jeu();
+void jeu_humains();
