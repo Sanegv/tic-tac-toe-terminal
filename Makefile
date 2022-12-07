@@ -1,29 +1,20 @@
 run: compile
-	./main
+	./bin/main
 
-compile: main.o fonctions.o
-	gcc -Wall -o main main.o fonctions.o -g
+compile: bin/main.o bin/fonctions.o
+	gcc -Wall -o ./bin/main ./bin/main.o ./bin/fonctions.o -g
 
-main.o: main.c fonctions.o
-	gcc -Wall -c main.c fonctions.h fonctions.c -g
+./bin/main.o: src/main.c bin/fonctions.o
+	gcc -Wall -c src/main.c src/fonctions.h src/fonctions.c -g
+	mv main.o ./bin/main.o
 
-fonctions.o: fonctions.h fonctions.c
-	gcc -Wall -c fonctions.h fonctions.c -g
-
-sarcasme: sarcasme.c
-	gcc -Wall -o sarcasme sarcasme.c -g
-	./sarcasme
+./bin/fonctions.o: src/fonctions.h src/fonctions.c
+	gcc -Wall -c src/fonctions.h src/fonctions.c -g
+	mv fonctions.o ./bin/fonctions.o
 
 clean: 
-	rm *.o
-	rm main
-	rm sarcasme
+	rm bin/*.o
+	rm *.gch
 
 valgrind: compile
-	valgrind ./main
-
-code:
-	code Makefile
-	code main.c
-	code fonctions.c
-	code fonctions.h
+	valgrind ./bin/main
