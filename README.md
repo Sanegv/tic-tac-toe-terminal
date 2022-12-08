@@ -8,10 +8,9 @@
 ## 2. How to use
  If you are using ubuntu, simply run bin/main, or just use the "make" command, and it will recompile and run automatically.
  If you're using another OS, you'll have to recompile the source code for yourself.
- Once you rune the program, a menu will open and ask you if you want to play player v. player, or against an AI. If you choose AI, you'll get to choose which turn you play, or let the computer pick one randomly.
- For now, there is only one AI difficulty : it only plays random moves.
+ Once you rune the program, a menu will open and ask you if you want to play player v. player, or against an AI. If you choose AI, you'll get to choose how smart you want the computer to be, then which turn you play, or let the computer decide randomly the turn for you.
+ For now, there are two difficulties: either the AI plays randomly (basic AI) or it can try to win and defend, seeing up to one move ahead (smarter AI).
 
 ## 3. Future improvements
 - I'll code an AI that plays the optimal move every time 
-- I might add an intermediate level that tries to win and block you, but without necessarily playing the perfect move
 - In the long term, I'll make a simple GUI
