@@ -55,3 +55,20 @@ bool check_nulle(char** grille);
  * 
  */
 void jeu_humains();
+
+/**
+ * @brief renvoie true si la grille est vide, faux sinon
+ * 
+ * @param grille 
+ * @return bool
+ */
+bool check_grille_vide(char** grille);
+
+/**
+ * @brief renvoie vrai si exactement l'un des coins est rempli, mais que le reste de la grille est vide, renvoie faux si toute la grille est vide
+ * 
+ * @param grille 
+ * @return true 
+ * @return false 
+ */
+bool check_coins(char** grille);

@@ -8,7 +8,7 @@
 ## 2. How to use
  If you are using ubuntu, simply run bin/main, or just use the "make" command, and it will recompile and run automatically.
  If you're using another OS, you'll have to recompile the source code for yourself.
- Then, a menu will open and ask you if you want to play player v. player, or against an AI. If you choose AI, you'll get to choose which turn you play, or let the computer pick one randomly.
+ Once you rune the program, a menu will open and ask you if you want to play player v. player, or against an AI. If you choose AI, you'll get to choose which turn you play, or let the computer pick one randomly.
  For now, there is only one AI difficulty : it only plays random moves.
 
 ## 3. Future improvements

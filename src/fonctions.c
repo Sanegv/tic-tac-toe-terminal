@@ -112,3 +112,41 @@ void jeu_humains(){
 	//on libère la grille avant de partir
 	free_grille(grille);
 }
+
+bool check_grille_vide(char** grille){
+	//parcourt toute la grille
+	for(int i = 0; i < 3; i++){
+		for(int j = 0; j < 3; j++){
+			//renvoie faux si une case n'est pas vide
+			if(grille[i][j]) return false;
+		}
+	}
+
+	//renvoie vrai sinon
+	return true;
+}
+
+bool check_coins(char** grille){
+	/*//la fonction en commentaire renverra true si au moins l'un des coins est pris
+	return (
+		  (grille[0][0]) //coin supérieur gauche
+		||(grille[0][2]) //coin supérieur droit
+		||(grille[2][0]) //coin inférieur gauche
+		||(grille[2][2]) //coin inférieur droit
+	);*/
+
+	char joueur; //utilisé pour sauvegarder le premier coin non vide rencontré
+	bool coins; 
+	for(int i = 0; i < 3; i+=2){ //on vérifie tous les coins (et seulement les coins)
+		for(int j = 0; j < 3; j+=2){
+			if(grille[i][j]){ //si l'un des coins est rempli
+				joueur = grille[i][j]; //on sauvegarde le char qui le remplit
+				grille[i][j] = 0; //on vide la case
+				coins = check_grille_vide(grille); //on vérifie que le reste de la grille est vide
+				grille[i][j] = joueur; //on remet le char qui était dans le coin
+				return coins; 
+			}
+		}
+	}
+	return false; //si on arrive ici, alors toute la grille est vide et on veut false (on ne joue pas au centre si la grille est vide)
+}
